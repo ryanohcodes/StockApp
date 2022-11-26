@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{2A68CCC9-7E38-479F-85F4-BE17C89ED1EF}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="pokeApi/WeatherForecast.cs">
+    <Files>
+      <File FileName="pokeApi/WeatherForecast.cs" Line="14" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="pokeApi" expanded="True">
+            <Node name="pokeApi" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="WeatherForecast.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.pokeApi PreferredExecutionTarget="/Applications/Firefox.app" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
