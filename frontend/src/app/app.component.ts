@@ -27,5 +27,9 @@ export class AppComponent {
   updatePokemonList(pokemon: Pokemon[]){
     this.box = pokemon;
   }
-  
+  removeMon(mon:Pokemon){
+    this.pokeService.deletePokemon(mon)
+    .subscribe((result: Pokemon[])=> (this.box = result))
+  }
+ 
 }

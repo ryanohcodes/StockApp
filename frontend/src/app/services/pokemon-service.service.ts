@@ -13,7 +13,7 @@ export class PokemonServiceService {
 
   }
   
-  public findPokemon(pokemon: string){
+  public findPokemon(pokemon: string | number){
     return this.http.get(`${environment.pokeUrl}/${pokemon}`)
   }
 
@@ -25,6 +25,7 @@ export class PokemonServiceService {
       `${environment.backendUrl}/${mon.id}`
     )
   }
+  
   public capturePokemon(mon: Pokemon) : Observable<Pokemon[]>{
     return this.http.post<Pokemon[]>(
       `${environment.backendUrl}`,mon)

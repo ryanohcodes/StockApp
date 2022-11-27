@@ -2,6 +2,7 @@ export class Pokemon{
     id?: number;
     name = "";
     image = "";
-    // move3 = "";
-    // move4 = "";
+    weight? : number;
+    height? : number;
+    dexid? : number;
 }

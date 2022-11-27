@@ -1,13 +1,28 @@
-<button (click)="findPokemon()">Find Pokemon</button>
-<table>
-    <thead>
-      <th>Name</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let mon of box">
-        <td>{{ mon.name }}</td>
-        <td><img src={{mon.image}} alt="picture of {{this.mon.name}}"></td>
-      </tr>
-    </tbody>
-  </table>
+
+
+    
+      <h2>Team</h2>
+    
+    <section class="team">
+      <mat-card class="card" *ngFor="let mon of box">
+        <mat-card-header>
+          <mat-card-title>{{ mon.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <img src={{mon.image}} alt="picture of {{this.mon.name}}">
+        </mat-card-content>
+        <mat-card-content>
+          PokeDex ID: {{mon.dexid}}
+        </mat-card-content>
+        <mat-card-content>Height: {{mon.height}} m</mat-card-content>
+        <mat-card-content>Weight: {{mon.weight}} lbs</mat-card-content>
+        <mat-card-actions>
+          <button  color="primary" mat-raised-button (click)="removeMon(mon)">Release</button>
+        </mat-card-actions>
+    </mat-card>
+    </section>
+      
+    
+
+  <button mat-raised-button color="primary" (click)="findPokemon()">Find Pokemon</button>
 <app-find-pokemon [mon]="foundPokemon" (pokemonUpdated)="updatePokemonList($event)"></app-find-pokemon>
