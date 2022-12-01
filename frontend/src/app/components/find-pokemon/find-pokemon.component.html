@@ -1,0 +1,16 @@
+<div *ngIf="mon">
+    <div>
+        Name:
+        <input [(ngModel)]="mon.name" placeholder="Name">
+        <button (click)="findPokemon(mon.name)">Find</button>
+        <div *ngIf="mon">
+            <button (click)="captureMon(mon)">Capture</button>
+            <div *ngFor="let mon of found">
+                <div>{{mon.name}}</div>
+                <div *ngFor="let pic of images">
+                    <img src={{pic}} >
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

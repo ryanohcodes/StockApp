@@ -1,0 +1,13 @@
+<button (click)="findPokemon()">Find Pokemon</button>
+<table>
+    <thead>
+      <th>Name</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mon of box">
+        <td>{{ mon.name }}</td>
+        <td><img src={{mon.image}} alt="picture of {{this.mon.name}}"></td>
+      </tr>
+    </tbody>
+  </table>
+<app-find-pokemon [mon]="foundPokemon" (pokemonUpdated)="updatePokemonList($event)"></app-find-pokemon>
