@@ -3,10 +3,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: rgb(246, 243, 241);
 }
 .team{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.actions{
+    margin-left: 6rem;
+}
+.actions button{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }

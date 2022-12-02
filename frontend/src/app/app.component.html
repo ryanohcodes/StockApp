@@ -1,8 +1,11 @@
 
 
-    
-      <h2>Team</h2>
-    
+    <section class="actions">
+      <h2>The Box</h2>
+      <button mat-raised-button color="primary" (click)="findPokemon()">Find Pokemon</button>
+      
+    </section>
+    <app-find-pokemon [mon]="foundPokemon" (pokemonUpdated)="updatePokemonList($event)"></app-find-pokemon>
     <section class="team">
       <mat-card class="card" *ngFor="let mon of box">
         <mat-card-header>
@@ -19,10 +22,6 @@
         <mat-card-actions>
           <button  color="primary" mat-raised-button (click)="removeMon(mon)">Release</button>
         </mat-card-actions>
-    </mat-card>
+      </mat-card>
     </section>
       
-    
-
-  <button mat-raised-button color="primary" (click)="findPokemon()">Find Pokemon</button>
-<app-find-pokemon [mon]="foundPokemon" (pokemonUpdated)="updatePokemonList($event)"></app-find-pokemon>

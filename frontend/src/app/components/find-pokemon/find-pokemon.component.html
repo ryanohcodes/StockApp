@@ -1,12 +1,13 @@
 <div *ngIf="mon">
     <div>
-        
-        Name:
-        <input [(ngModel)]="mon.name" placeholder="Name">
-        <button color="primary" mat-raised-button (click)="findPokemon(mon.name)">Find</button>
-        <button color="accent" mat-raised-button (click)="getRandomMon()">Find Random Pokemon</button>
-        <div *ngIf="mon">
-            
+        <section class="getter">
+          <span>Name: </span>
+          <input [(ngModel)]="mon.name" placeholder="Name">
+          <button color="primary" mat-raised-button (click)="findPokemon(mon.name)">Find</button>
+          <button color="accent" mat-raised-button (click)="getRandomMon()">Find Random Pokemon</button>
+        </section>
+          <div *ngIf="mon"> 
+            <button class="capture" *ngIf="found.length > 0" color="warn" mat-raised-button (click)="captureMon(data)">Capture</button>
             <section class="team">
                 <mat-card class="card" *ngFor="let mon of found">
                     
@@ -16,16 +17,16 @@
                   <mat-card-content>
                     <img src={{data.image}} alt="picture of {{this.mon.name}}">
                   </mat-card-content>
-                  <!-- <mat-card-content>
-                    PokeDex ID: {{data.dexId}}
-                  </mat-card-content> -->
+                  <mat-card-content>
+                    PokeDex ID: {{data.dexid}}
+                  </mat-card-content>
                   <mat-card-content>Height: {{data.height}} m</mat-card-content>
                   <mat-card-content>Weight: {{data.weight}} lbs</mat-card-content>
   
               </mat-card>
               </section>
 
-            <button *ngIf="found.length > 0" color="warn" mat-raised-button (click)="captureMon(data)">Capture</button>
+            
         </div>
     </div>
 </div>

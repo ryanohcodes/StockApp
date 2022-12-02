@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(208, 242, 189);
 }
 .team{
 
@@ -11,6 +12,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-    
+        align-items: center; 
+}
+.getter{
+    margin-left: 6rem;
+    margin-bottom: 2rem;
+}
+.capture{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 1rem;
 }
