@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using pokeApi.Data;
 
@@ -10,9 +11,11 @@ using pokeApi.Data;
 namespace pokeApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20221202064014_fixPlz")]
+    partial class fixPlz
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,8 +35,8 @@ namespace pokeApi.Migrations
                     b.Property<int>("Dexid")
                         .HasColumnType("int");
 
-                    b.Property<float>("Height")
-                        .HasColumnType("real");
+                    b.Property<int>("Height")
+                        .HasColumnType("int");
 
                     b.Property<string>("Image")
                         .IsRequired()

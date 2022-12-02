@@ -1,7 +1,17 @@
 ﻿<Properties StartupConfiguration="{2A68CCC9-7E38-479F-85F4-BE17C89ED1EF}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="pokeApi/WeatherForecast.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="pokeApi/Migrations/20221201065041_Images.Designer.cs">
     <Files>
-      <File FileName="pokeApi/WeatherForecast.cs" Line="14" Column="1" />
+      <File FileName="pokeApi/Properties/launchSettings.json" Line="25" Column="48" />
+      <File FileName="pokeApi/Pokemon.cs" Line="12" Column="1" />
+      <File FileName="pokeApi/appsettings.json" Line="3" Column="60" />
+      <File FileName="pokeApi/Data/DataContext.cs" Line="11" Column="32" />
+      <File FileName="pokeApi/Controllers/HomeController.cs" Line="40" Column="8" />
+      <File FileName="pokeApi/Program.cs" Line="23" Column="50" />
+      <File FileName="pokeApi/Migrations/DataContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="pokeApi/Migrations/20221201003008_Initial.cs" Line="1" Column="1" />
+      <File FileName="pokeApi/Migrations/20221201065041_Images.cs" Line="1" Column="1" />
+      <File FileName="pokeApi/Migrations/20221201065041_Images.Designer.cs" Line="1" Column="1" />
+      <File FileName="pokeApi/Migrations/20221201003008_Initial.Designer.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,7 +19,14 @@
           <Node name="pokeApi" expanded="True">
             <Node name="pokeApi" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="WeatherForecast.cs" selected="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True">
+                <Node name="20221201003008_Initial.cs" expanded="True" />
+                <Node name="20221201065041_Images.cs" expanded="True">
+                  <Node name="20221201065041_Images.Designer.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Properties" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -17,7 +34,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.pokeApi PreferredExecutionTarget="/Applications/Firefox.app" FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.pokeApi PreferredExecutionTarget="/Applications/Firefox.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

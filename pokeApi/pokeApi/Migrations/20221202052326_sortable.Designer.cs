@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using pokeApi.Data;
 
@@ -10,9 +11,11 @@ using pokeApi.Data;
 namespace pokeApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20221202052326_sortable")]
+    partial class sortable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,11 +32,11 @@ namespace pokeApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Dexid")
+                    b.Property<int>("DexId")
                         .HasColumnType("int");
 
-                    b.Property<float>("Height")
-                        .HasColumnType("real");
+                    b.Property<int>("Height")
+                        .HasColumnType("int");
 
                     b.Property<string>("Image")
                         .IsRequired()

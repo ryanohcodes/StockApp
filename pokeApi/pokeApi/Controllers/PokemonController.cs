@@ -45,7 +45,7 @@ namespace pokeApi.Controllers
             return Ok(await _context.Pokemon.ToListAsync());
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult<List<Pokemon>>> DeletePokemon(int id)
         {
             var dbPokemon = await _context.Pokemon.FindAsync(id);
