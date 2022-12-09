@@ -13,14 +13,15 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<DataContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")); //same namr from appsettings.json
 });
 
-// these lines of code resolve CORS issues
+// these lines of code resolve CORS issues from angular local host
 builder.Services.AddCors(options => options.AddPolicy(name: "PokemonOrigins",
     policy =>
     {
         policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+        policy.WithOrigins("https://localhost:7251").AllowAnyMethod().AllowAnyHeader();
     }
     ));
 var app = builder.Build();
@@ -32,7 +33,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+// actually uses the CORS 
 app.UseCors("PokemonOrigins");
 app.UseHttpsRedirection();
 

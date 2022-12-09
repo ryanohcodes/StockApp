@@ -1,6 +1,7 @@
 ﻿using System;
 namespace pokeApi
-{
+{   // this is our model, schema, and what shows up on the database.
+    // MAKE SURE ANGULAR IS CONSISTENT WITH THIS SCHEMA (FLOATS)
 	public class Pokemon
 	{
         public int Id { get; set; }
