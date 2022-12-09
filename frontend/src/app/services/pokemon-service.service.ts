@@ -30,6 +30,13 @@ export class PokemonServiceService {
     return this.http.post<Pokemon[]>(
       `${environment.backendUrl}`,mon)
   }
-
-
+  public sortPokemonByWeight(): Observable<Pokemon[]>{
+    return this.http.get<Pokemon[]>(`${environment.backendUrl}/weight`)
+  }
+  public sortPokemonByHeight(num : Number): Observable<Pokemon[]>{
+    return this.http.get<Pokemon[]>(`${environment.backendUrl}/heights/heights`)
+  }
+  public filterPokeMonByWeight(num: Number): Observable<Pokemon[]>{
+    return this.http.get<Pokemon[]>(`${environment.backendUrl}/weights/${num}`)
+  }
 }

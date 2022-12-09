@@ -64,10 +64,6 @@ export class FindPokemonComponent implements OnInit {
       this.data.height = 0;
       this.data.dexid = 0;
   }
-  
-    
-    
-    
   removeMon(mon:Pokemon){
     this.pokeService.deletePokemon(mon)
     .subscribe((pokemons: Pokemon[]) => this.pokemonUpdated.emit(pokemons))

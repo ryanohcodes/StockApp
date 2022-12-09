@@ -9,11 +9,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button'; 
 import {MatCardModule} from '@angular/material/card'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WeightFilterComponent } from './components/weight-filter/weight-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FindPokemonComponent
+    FindPokemonComponent,
+    WeightFilterComponent
   ],
   imports: [
     BrowserModule,

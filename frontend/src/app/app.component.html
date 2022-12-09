@@ -2,10 +2,17 @@
 
     <section class="actions">
       <h2>The Box</h2>
-      <button mat-raised-button color="primary" (click)="findPokemon()">Find Pokemon</button>
+      <div>
+        <button class="buttonStuff" mat-raised-button color="primary" (click)="findPokemon()">Find Pokemon</button>
+        <button class="buttonStuff" mat-raised-button color="primary" (click)="sortByWeight()">Weight Sort</button>
+        <button class="buttonStuff" mat-raised-button color="primary" (click)="sortByHeight()">Height Sort</button>
+        <button class="buttonStuff" mat-raised-button color="primary" (click)="getMon()">Acquisition</button>
+      <app-weight-filter (pokemonUpdated)="updatePokemonList($event)"></app-weight-filter>  
+      </div>
       
     </section>
     <app-find-pokemon [mon]="foundPokemon" (pokemonUpdated)="updatePokemonList($event)"></app-find-pokemon>
+
     <section class="team">
       <mat-card class="card" *ngFor="let mon of box">
         <mat-card-header>
